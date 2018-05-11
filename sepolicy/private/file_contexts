@@ -64,3 +64,8 @@
 /sys/module/msm_performance/workload_modes u:object_r:sysfs_msm_perf:s0
 /sys/kernel/boot_adsp/boot                                          u:object_r:sysfs_boot_adsp:s0
 /sys/kernel/boot_slpi(/.*)?                                         u:object_r:sysfs_slpi:s0
+
+
+# CAF services and things
+# Perf
+/system/bin/perfservice                                                                   u:object_r:perfservice_exec:s0
