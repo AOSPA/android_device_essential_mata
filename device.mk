@@ -48,7 +48,6 @@ PRODUCT_PACKAGES += \
     libqcomvisualizer \
     libqcomvoiceprocessing \
     libvolumelistener \
-    tinymix \
     vendor.qti.hardware.bluetooth_audio@2.0
 
 PRODUCT_COPY_FILES += \
