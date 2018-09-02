@@ -393,8 +393,7 @@ PRODUCT_PACKAGES += \
 # libstdc++: hexagon DSP blobs
 PRODUCT_EXTRA_VNDK_VERSIONS := 29
 PRODUCT_PACKAGES += \
-    libstdc++.vendor \
-    vndk_package
+    libstdc++.vendor
 
 # Wifi
 PRODUCT_COPY_FILES += \
