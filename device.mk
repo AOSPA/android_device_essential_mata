@@ -162,7 +162,6 @@ PRODUCT_COPY_FILES += \
 # Soong
 PRODUCT_SOONG_NAMESPACES += \
     device/essential/mata \
-    hardware/google/pixel
 
 # Tethering
 PRODUCT_PROPERTY_OVERRIDES += \
