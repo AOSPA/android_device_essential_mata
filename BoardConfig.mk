@@ -175,6 +175,7 @@ TARGET_USES_NON_LEGACY_POWERHAL := true
 TARGET_OVERLAYS_POWERHAL := true
 
 # Recovery
+TARGET_RECOVERY_FSTAB := device/essential/mata/rootdir/etc/fstab.mata
 TARGET_RECOVERY_UI_MARGIN_WIDTH := 64
 TARGET_RECOVERY_WIPE := $(DEVICE_PATH)/recovery.wipe
 

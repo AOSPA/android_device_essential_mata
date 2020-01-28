@@ -21,6 +21,11 @@ PRODUCT_BOARD_PLATFORM := msm8998
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += device/essential/mata/overlay
 
+PRODUCT_ACTIONABLE_COMPATIBLE_PROPERTY_DISABLE := true
+PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
+
+PRODUCT_CHARACTERISTICS := nosdcard
+
 # Properties
 -include device/essential/mata/system_prop.mk
 
