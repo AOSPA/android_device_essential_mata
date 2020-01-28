@@ -41,3 +41,4 @@ vendor.debug.egl.profiler  u:object_r:public_vendor_default_prop:s0
 vendor.debug.rs.           u:object_r:public_vendor_default_prop:s0
 persist.debug.sf.showfps   u:object_r:vendor_default_prop:s0
 persist.cne.logging.qxdm   u:object_r:public_vendor_default_prop:s0
+ro.qc.sdk.audio.fluencetype  u:object_r:vendor_default_prop:s0
