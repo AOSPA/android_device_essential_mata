@@ -27,7 +27,7 @@ PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 PRODUCT_CHARACTERISTICS := nosdcard
 
 # Properties
--include device/essential/mata/system_prop.mk
+TARGET_SYSTEM_PROP := device/essential/mata/system.prop
 
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
