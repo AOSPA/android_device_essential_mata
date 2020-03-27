@@ -7,15 +7,12 @@
 
 /system/bin/fastboot_target                                                                             u:object_r:shell_exec:s0
 # Vendor overlay
-/(product|system/product)/vendor_overlay/[0-9]+/etc(/.*)?                                               u:object_r:vendor_configs_file:s0
 /(product|system/product)/vendor_overlay/[0-9]+/bin/hw/vendor\.qti\.hardware\.perf@1\.0-service         u:object_r:hal_perf_default_exec:s0
-/(product|system/product)/vendor_overlay/[0-9]+/bin/hw/android\.hardware\.power@1\.2-service-qti        u:object_r:hal_power_default_exec:s0
 /(product|system/product)/vendor_overlay/[0-9]+/bin/hw/android\.hardware\.light@2\.0-service            u:object_r:hal_light_default_exec:s0
 /(product|system/product)/vendor_overlay/[0-9]+/bin/imsrcsd                                             u:object_r:hal_rcsservice_exec:s0
 # custom init shells
 /(product|system/product)/vendor_overlay/[0-9]+/bin/init\.qcom\.devstart\.sh                            u:object_r:init-qcom-devstart-sh_exec:s0
 /(product|system/product)/vendor_overlay/[0-9]+/bin/init\.qcom\.ipastart\.sh                            u:object_r:init-qcom-ipastart-sh_exec:s0
-/(product|system/product)/vendor_overlay/[0-9]+/bin/init\.qcom\.post_boot\.sh                           u:object_r:qti_init_shell_exec:s0
 
 /dev/usb_ext_chg                                                                                        u:object_r:hvdcp_device:s0
 /dev/cpu_dma_latency                                                                                    u:object_r:device_latency:s0
