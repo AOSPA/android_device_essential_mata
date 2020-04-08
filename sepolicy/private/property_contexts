@@ -24,6 +24,13 @@ persist.dualcam. u:object_r:camera_prop:s0
 persist.capture. u:object_r:camera_prop:s0
 vendor.camera.aux.packagelist              u:object_r:vendor_camera_prop:s0
 persist.vendor.camera.privapp.list         u:object_r:vendor_camera_prop:s0
+
+# IOP
+vendor.iop.enable_uxe      u:object_r:vendor_iop_prop:s0
+vendor.perf.iop_v3.enable  u:object_r:vendor_iop_prop:s0
+vendor.perf.iop_v3.enable.debug u:object_r:vendor_iop_prop:s0
+vendor.iop.enable_prefetch_ofr   u:object_r:vendor_iop_prop:s0
+
 #mm-video
 persist.vendor.debug.av.logs.lvl   u:object_r:debug_prop:s0
 persist.vendor.debug.en.drpcrpt   u:object_r:debug_prop:s0
