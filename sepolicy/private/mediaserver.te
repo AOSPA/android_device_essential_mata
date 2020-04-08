@@ -1,1 +1,3 @@
 allow mediaserver vendor_file:dir { read open };
+get_prop(mediaserver, mm_video_prop)
+get_prop(mediaserver, debug_prop)

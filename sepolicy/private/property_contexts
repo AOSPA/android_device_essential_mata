@@ -25,6 +25,9 @@ persist.capture. u:object_r:camera_prop:s0
 vendor.camera.aux.packagelist              u:object_r:vendor_camera_prop:s0
 persist.vendor.camera.privapp.list         u:object_r:vendor_camera_prop:s0
 #mm-video
+persist.vendor.debug.av.logs.lvl   u:object_r:debug_prop:s0
+persist.vendor.debug.en.drpcrpt   u:object_r:debug_prop:s0
+vendor.debug.vidc.enc.sup_bframe    u:object_r:debug_prop:s0
 vendor.encoder.video.profile       u:object_r:mm_video_prop:s0
 vendor.video.disable.ubwc          u:object_r:mm_video_prop:s0
 persist.vendor.media.hls.          u:object_r:mm_video_prop:s0
