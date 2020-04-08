@@ -9,6 +9,8 @@ vendor.debug.trace.perf    u:object_r:vendor_mpctl_prop:s0
 vendor.qcom.devup          u:object_r:vendor_device_prop:s0
 vendor.wlan.driver.version       u:object_r:vendor_wifi_version:s0
 vendor.wlan.firmware.version     u:object_r:vendor_wifi_version:s0
+vendor.mm.enable.qcom_parser       u:object_r:mm_parser_prop:s0
+vendor.qcom_parser.                u:object_r:mm_parser_prop:s0
 persist.std_pd.            u:object_r:vendor_default_prop:s0
 persist.tb.                u:object_r:vendor_default_prop:s0
 persist.hvdcp.             u:object_r:vendor_default_prop:s0
