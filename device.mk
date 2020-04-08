@@ -162,7 +162,6 @@ PRODUCT_COPY_FILES += \
     device/essential/mata/configs/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml
 
 TARGET_COMMON_QTI_COMPONENTS := \
-    av \
     perf
 
 # Recovery
