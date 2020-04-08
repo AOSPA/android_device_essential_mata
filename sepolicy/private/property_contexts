@@ -22,7 +22,8 @@ persist.ctm.               u:object_r:vendor_default_prop:s0
 persist.denoise. u:object_r:camera_prop:s0
 persist.dualcam. u:object_r:camera_prop:s0
 persist.capture. u:object_r:camera_prop:s0
-
+vendor.camera.aux.packagelist              u:object_r:vendor_camera_prop:s0
+persist.vendor.camera.privapp.list         u:object_r:vendor_camera_prop:s0
 #mm-video
 vendor.encoder.video.profile       u:object_r:mm_video_prop:s0
 vendor.video.disable.ubwc          u:object_r:mm_video_prop:s0

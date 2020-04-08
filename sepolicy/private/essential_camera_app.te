@@ -1,0 +1,4 @@
+type essential_camera_app, domain, coredomain;
+
+app_domain(essential_camera_app)
+get_prop(essential_camera_app, vendor_camera_prop)
