@@ -112,7 +112,6 @@ PRODUCT_PACKAGES += \
     init.mata.rc \
     init.qcom.devstart.sh \
     init.qcom.ipastart.sh \
-    init.qcom.post_boot.sh \
     ueventd.mata.rc
 
 # IPACM
@@ -151,10 +150,6 @@ PRODUCT_PACKAGES += \
 # Permissions
 PRODUCT_COPY_FILES += \
     device/essential/mata/configs/privapp-permissions-mata.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-mata.xml \
-
-# Power
-PRODUCT_PACKAGES += \
-    android.hardware.power@1.2-service
 
 # QCOM
 PRODUCT_COPY_FILES += \
