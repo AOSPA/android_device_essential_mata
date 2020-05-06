@@ -156,9 +156,6 @@ PRODUCT_COPY_FILES += \
     device/essential/mata/configs/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-qti.xml \
     device/essential/mata/configs/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml
 
-TARGET_COMMON_QTI_COMPONENTS := \
-    perf
-
 # Recovery
 PRODUCT_COPY_FILES += \
     device/essential/mata/recovery/root/fstab.recovery.mata:recovery/root/fstab.recovery.mata \
