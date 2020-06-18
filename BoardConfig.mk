@@ -82,9 +82,6 @@ TARGET_HAS_HDR_DISPLAY := true
 # DRM
 TARGET_ENABLE_MEDIADRM_64 := true
 
-# HIDL
-TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
-
 # Kernel
 BOARD_KERNEL_CMDLINE := androidboot.hardware=mata user_debug=31 ehci-hcd.park=3
 BOARD_KERNEL_CMDLINE += lpm_levels.sleep_disabled=1 service_locator.enable=1
