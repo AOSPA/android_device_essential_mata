@@ -25,9 +25,9 @@ VENDOR=essential
 MY_DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "$MY_DIR" ]]; then MY_DIR="$PWD"; fi
 
-STATIX_ROOT="$MY_DIR"/../../..
+PA_ROOT="$MY_DIR"/../../..
 
-HELPER="$STATIX_ROOT"/vendor/statix/build/tools/extract_utils.sh
+HELPER="$PA_ROOT"/vendor/pa/build/tools/extract_utils.sh
 if [ ! -f "$HELPER" ]; then
     echo "Unable to find helper script at $HELPER"
     exit 1
@@ -60,16 +60,18 @@ if [ -z "${SRC}" ]; then
 fi
 
 # Initialize the helper
-setup_vendor "$DEVICE" "$VENDOR" "$STATIX_ROOT" false "$CLEAN_VENDOR"
+setup_vendor "$DEVICE" "$VENDOR" "$PA_ROOT" false "$CLEAN_VENDOR"
 
 extract "$MY_DIR"/proprietary-files.txt "$SRC" ${KANG} --section "$SECTION"
 extract "$MY_DIR"/proprietary-files-recovery.txt "$SRC" ${KANG} --section "$SECTION"
 
-sed -i 's/service fps_hal_mata/service vendor.fps_hal_mata/g' "$STATIX_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary/vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.mata.rc
-sed -i 's/service sidecar-hal-1-0/service vendor.sidecar-hal-1-0/g' "$STATIX_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary/vendor/etc/init/vendor.essential.hardware.sidecar@1.0-service.rc
+sed -i 's/service fps_hal_mata/service vendor.fps_hal_mata/g' "$PA_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary/vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.mata.rc
+sed -i 's/service sidecar-hal-1-0/service vendor.sidecar-hal-1-0/g' "$PA_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary/vendor/etc/init/vendor.essential.hardware.sidecar@1.0-service.rc
 
-patchelf --add-needed "libbase_shim.so" "$STATIX_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary/vendor/bin/imsrcsd
-patchelf --add-needed "libbase_shim.so" "$STATIX_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary/vendor/lib64/lib-imsrcs-v2.so
-patchelf --add-needed "libbase_shim.so" "$STATIX_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary/vendor/lib64/lib-uceservice.so
+patchelf --add-needed "libbase_shim.so" "$PA_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary/vendor/bin/imsrcsd
+patchelf --add-needed "libbase_shim.so" "$PA_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary/vendor/lib64/lib-imsrcs-v2.so
+patchelf --add-needed "libbase_shim.so" "$PA_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary/vendor/lib64/lib-uceservice.so
+patchelf --set-soname "vulkan.msm8998.so" "$PA_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary/vendor/lib/hw/vulkan.msm8998.so
+patchelf --set-soname "vulkan.msm8998.so" "$PA_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary/vendor/lib64/hw/vulkan.msm8998.so
 
 "$MY_DIR"/setup-makefiles.sh
