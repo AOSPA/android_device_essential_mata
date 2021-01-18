@@ -300,6 +300,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml
 
 # Power
+TARGET_PROVIDES_POWERHAL := true
 PRODUCT_PACKAGES += \
     android.hardware.power-service.pixel-libperfmgr \
     android.hardware.power.stats@1.0-service.pixel
