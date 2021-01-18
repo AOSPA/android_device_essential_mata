@@ -106,6 +106,7 @@ PRODUCT_PACKAGES_DEBUG += \
     bootctl
 
 # Bluetooth
+TARGET_USE_QTI_BT_STACK := false
 PRODUCT_PACKAGES += \
     libbt-vendor \
     libbthost_if \
