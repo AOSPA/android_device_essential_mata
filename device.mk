@@ -14,10 +14,6 @@
 # limitations under the License.
 #
 
-# Platform
-PRODUCT_USES_QCOM_HARDWARE := true
-PRODUCT_BOARD_PLATFORM := msm8998
-
 # Blur
 TARGET_USES_BLUR := true
 
