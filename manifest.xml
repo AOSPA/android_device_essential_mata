@@ -262,7 +262,7 @@
         <version>1.0</version>
         <interface>
             <name>IDSManager</name>
-            <instance>wifidisplayhdcphal</instance>
+            <instance>wifidisplaydshal</instance>
         </interface>
         <interface>
             <name>IHDCPSession</name>
