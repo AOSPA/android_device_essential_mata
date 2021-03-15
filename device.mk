@@ -155,7 +155,8 @@ PRODUCT_PACKAGES += \
 
 # Health
 PRODUCT_PACKAGES += \
-    android.hardware.health@2.0-service.mata
+    android.hardware.health@2.1-impl-qti \
+    android.hardware.health@2.1-service
 
 # HDR
 PRODUCT_COPY_FILES += \
@@ -278,14 +279,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/com.android.nfc_extras.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.android.nfc_extras.xml \
     frameworks/native/data/etc/com.nxp.mifare.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.nxp.mifare.xml
 
-# Power
-PRODUCT_PACKAGES += \
-    android.hardware.power-service.pixel-libperfmgr \
-    android.hardware.power.stats@1.0-service.pixel
-
-PRODUCT_COPY_FILES += \
-    device/essential/mata/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
-
 # Protobuf
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full-vendorcompat \
@@ -305,7 +298,8 @@ PRODUCT_PACKAGES += \
 
 # QTI Components
 TARGET_COMMON_QTI_COMPONENTS := \
-    bt
+    bt \
+    perf
 
 # Radio
 PRODUCT_PACKAGES += \
@@ -331,9 +325,7 @@ PRODUCT_PACKAGES += \
 
 # Soong
 PRODUCT_SOONG_NAMESPACES += \
-    device/essential/mata \
-    hardware/google/interfaces \
-    hardware/google/pixel
+    device/essential/mata
 
 # Tethering
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -343,20 +335,12 @@ PRODUCT_PACKAGES += \
     TetheringConfigOverlay
 
 # Thermal
-PRODUCT_PACKAGES += \
-    android.hardware.thermal@2.0-service.pixel
-
 PRODUCT_COPY_FILES += \
-    device/essential/mata/configs/thermal-engine.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf \
-    device/essential/mata/configs/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json
+    device/essential/mata/configs/thermal-engine.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf
 
 # Touchscreen
 PRODUCT_PACKAGES += \
     libtinyxml2
-
-# Tracing
-PRODUCT_PACKAGES += \
-    android.hardware.atrace@1.0-service.pixel
 
 # Update engine
 PRODUCT_PACKAGES += \
