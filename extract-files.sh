@@ -56,7 +56,7 @@ fi
 function blob_fixup() {
     case "${1}" in
     vendor/bin/imsrcsd|vendor/lib64/lib-imsrcs-v2.so|vendor/lib64/lib-uceservice.so)
-        patchelf --add-needed "libbase_shim.so" "${2}"
+        ${PATCHELF} --add-needed "libbase_shim.so" "${2}"
         ;;
     vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.mata.rc)
         sed -i 's/service fps_hal_mata/service vendor.fps_hal_mata/g' "${2}"
