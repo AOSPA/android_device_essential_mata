@@ -64,9 +64,6 @@ function blob_fixup() {
     vendor/etc/init/vendor.essential.hardware.sidecar@1.0-service.rc)
         sed -i 's/service sidecar-hal-1-0/service vendor.sidecar-hal-1-0/g' "${2}"
         ;;
-    vendor/lib/hw/vulkan.msm8998.so|vendor/lib64/hw/vulkan.msm8998.so)
-        patchelf --set-soname "vulkan.msm8998.so" "${2}"
-        ;;
     esac
 }
 
