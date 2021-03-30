@@ -118,22 +118,6 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-service \
     libxml2
 
-# Display
-PRODUCT_PACKAGES += \
-    android.hardware.graphics.allocator@2.0-impl:64 \
-    android.hardware.graphics.allocator@2.0-service \
-    android.hardware.graphics.composer@2.1-service \
-    android.hardware.graphics.mapper@2.0-impl-2.1 \
-    android.hardware.memtrack@1.0-impl \
-    android.hardware.memtrack@1.0-service \
-    gralloc.msm8998 \
-    hwcomposer.msm8998 \
-    libdisplayconfig \
-    libqdMetaData.system \
-    libtinyxml \
-    libvulkan \
-    memtrack.msm8998
-
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl \
@@ -300,6 +284,7 @@ PRODUCT_PACKAGES += \
 TARGET_COMMON_QTI_COMPONENTS := \
     adreno-legacy \
     bt \
+    display \
     perf
 
 # Radio
