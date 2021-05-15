@@ -21,6 +21,7 @@ cc_binary {
     init_rc: ["android.hardware.light@2.0-service.mata.rc"],
     vintf_fragments: ["android.hardware.light@2.0-service.mata.xml"],
     srcs: ["service.cpp", "Light.cpp"],
+    overrides: ["lights.qcom", "android.hardware.lights-service.qti"],
     shared_libs: [
         "libhardware",
         "libhidlbase",
